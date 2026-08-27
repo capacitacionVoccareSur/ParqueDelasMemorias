@@ -1,3 +1,5 @@
+import { useState } from "react";
+import GlobalSearch from "./GlobalSearch";
 import InicioPanel from "./panels/InicioPanel";
 import AuxiliarPanel from "./panels/AuxiliarPanel";
 import HorariosAtencionPanel from "./panels/HorariosAtencionPanel";
@@ -30,8 +32,15 @@ const nav = [
 ];
 
 export default function Layout({ activePanel, setActivePanel }) {
+  const [searchOpen, setSearchOpen] = useState(false);
+
   return (
     <div className="h-screen flex flex-col bg-[#f0f0ee] overflow-hidden">
+      <GlobalSearch
+        open={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onNavigate={(panel) => { setActivePanel(panel); setSearchOpen(false); }}
+      />
 
       {/* Header */}
       <header className="bg-[#1a5c3a] text-white px-5 py-3 flex items-center justify-between shrink-0">
@@ -40,6 +49,16 @@ export default function Layout({ activePanel, setActivePanel }) {
           <p className="text-white/70 text-xs mt-0.5">ADDIUVA · Herramienta interna</p>
         </div>
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 text-white text-xs font-semibold px-3 py-1.5 rounded transition-colors cursor-pointer"
+            title="Buscar en toda la herramienta (cualquier pestaña)"
+          >
+            <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+            </svg>
+            Buscar
+          </button>
           <a
             href="https://drive.google.com/drive/folders/1lNF-98N9SpzoUsF6yhUDsMN6mLoZ_lWX"
             target="_blank"

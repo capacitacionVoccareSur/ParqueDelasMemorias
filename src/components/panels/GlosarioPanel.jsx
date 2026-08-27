@@ -46,10 +46,10 @@ export default function GlosarioPanel() {
           filtrados.map(({ termino, definicion, seccion: s }) => (
             <div key={`${s}-${termino}`} className="py-2.5">
               <div className="flex items-baseline gap-2">
-                <p className="text-sm font-semibold text-gray-900">{termino}</p>
-                <span className="text-xs text-gray-500 shrink-0">{s}</span>
+                <p className="text-xs font-semibold text-gray-900">{termino}</p>
+                <span className="text-[10px] text-gray-500 shrink-0">{s}</span>
               </div>
-              <p className="text-sm text-gray-600 mt-0.5 leading-relaxed">{definicion}</p>
+              <p className="text-xs text-gray-600 mt-0.5 leading-snug">{definicion}</p>
             </div>
           ))
         )}
