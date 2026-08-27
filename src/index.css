@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes border-glow {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.4); }
+  50%       { box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.85); }
+}
+
+.neon-glow {
+  border-radius: 0.5rem;
+  animation: border-glow 2s ease-in-out infinite;
+}
