@@ -56,6 +56,9 @@ export default function MatrizPanel() {
   return (
     <div className="h-full flex flex-col gap-2.5 max-w-5xl">
 
+      <p className="text-xs text-gray-500 shrink-0">Directorio de contactos N1 y N2 para escalamiento, acceso a Planiris y tabla de responsabilidades RACI por tipo de actividad.</p>
+      <hr className="border-gray-100 shrink-0" />
+
       {/* Barra superior: tabs + botón directorio agentes */}
       <div className="flex items-center gap-1.5 shrink-0">
         {[["directorio", "Directorio de contactos"], ["raci", "Tabla de actividades (RACI)"]].map(([id, label]) => (

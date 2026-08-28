@@ -13,6 +13,9 @@ export default function InicioPanel() {
   return (
     <div className="max-w-5xl space-y-3">
 
+      <p className="text-xs text-gray-500">Guiones de apertura y cierre, instrucciones para completar el registro en Llenar Aquí y gestión de tickets.</p>
+      <hr className="border-gray-100" />
+
       {/* Guiones */}
       <div className="border border-[#1a5c3a]/30 rounded-lg overflow-hidden">
         <div className="bg-[#1a5c3a] px-4 py-1.5">

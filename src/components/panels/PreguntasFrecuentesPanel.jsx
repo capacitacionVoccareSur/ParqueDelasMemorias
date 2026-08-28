@@ -206,6 +206,9 @@ export default function PreguntasFrecuentesPanel() {
   return (
     <div className="h-full flex flex-col gap-2 max-w-5xl">
 
+      <p className="text-xs text-gray-500 shrink-0">Referencia rápida de los tipos de consulta más frecuentes con la acción recomendada y el nivel de escalamiento correspondiente.</p>
+      <hr className="border-gray-100 shrink-0" />
+
       {/* Filtro por escala */}
       <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
         {["Todas", "ADDIUVA", "N1", "N2"].map((f) => {

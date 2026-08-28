@@ -16,6 +16,8 @@ export default function GlosarioPanel() {
 
   return (
     <div className="h-full flex flex-col space-y-3 max-w-5xl">
+      <p className="text-xs text-gray-500 shrink-0">Definiciones de los términos utilizados en Parque de las Memorias y Casa Aura. Usa el buscador o filtra por sede.</p>
+      <hr className="border-gray-100 shrink-0" />
       <input
         type="text"
         placeholder="Buscar término..."

@@ -77,6 +77,9 @@ export default function AuxiliarPanel() {
   return (
     <div className="h-full flex flex-col gap-2.5 max-w-5xl">
 
+      <p className="text-xs text-gray-500 shrink-0">Tipos de consulta y nivel de atención recomendado (N0, N1, N2) para clasificar y derivar cada llamada correctamente.</p>
+      <hr className="border-gray-100 shrink-0" />
+
       {/* Leyenda + filtros en una sola fila */}
       <div className="flex items-center gap-3 shrink-0 flex-wrap">
         {Object.entries(niveles).map(([k, { label, color }]) => (

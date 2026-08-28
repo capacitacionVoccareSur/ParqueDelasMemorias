@@ -11,7 +11,7 @@ function Frase({ texto, etiqueta }) {
   return (
     <div className="border-l-4 border-[#1a5c3a] pl-3 py-0.5">
       {etiqueta && <p className="text-[10px] text-gray-500 mb-0.5">{etiqueta}</p>}
-      <p className="text-sm font-semibold text-gray-800 leading-snug">"{texto}"</p>
+      <p className="text-[13px] font-semibold text-gray-800 leading-snug">"{texto}"</p>
     </div>
   );
 }
@@ -19,7 +19,7 @@ function Frase({ texto, etiqueta }) {
 function Evitar({ texto }) {
   return (
     <div className="border-l-4 border-red-300 pl-3 py-0.5">
-      <p className="text-sm text-red-700 line-through">{texto}</p>
+      <p className="text-[13px] text-red-700 line-through">{texto}</p>
     </div>
   );
 }
@@ -28,16 +28,21 @@ export default function EmpatiaPanel() {
   return (
     <div className="space-y-6 max-w-5xl">
 
+      <p className="text-xs text-gray-500">Guía de comunicación empática para llamadas sensibles: frases recomendadas, frases a evitar y manejo de situaciones difíciles.</p>
+      <hr className="border-gray-100" />
+
+      <div className="border border-[#1a5c3a]/30 rounded-lg px-5 py-4 space-y-6">
+
       {/* Introducción */}
       <div className="bg-[#1a5c3a]/5 border border-[#1a5c3a]/20 rounded-lg px-4 py-3">
-        <p className="text-sm text-gray-800 leading-relaxed">
+        <p className="text-[13px] text-gray-800 leading-relaxed">
           Los afiliados de Parque de las Memorias y Casa Aura llaman en algunos de los momentos más difíciles de su vida. Hablar con alguien que acaba de perder a un ser querido, o que está organizando todo para cuando ese momento llegue, requiere una preparación especial. Esta sección es una guía práctica para desarrollar esa habilidad.
         </p>
       </div>
 
       {/* El contexto del afiliado */}
       <Bloque titulo="Quién es el afiliado que llama">
-        <div className="space-y-2 text-sm text-gray-700">
+        <div className="space-y-2 text-[13px] text-gray-700">
           <p>Los afiliados de un seguro exequial no son clientes comunes. Pueden llamar en tres momentos muy distintos:</p>
           <div className="space-y-1.5 ml-2">
             <div className="flex gap-2">
@@ -60,7 +65,7 @@ export default function EmpatiaPanel() {
 
       {/* Qué es la empatía en este contexto */}
       <Bloque titulo="Qué significa ser empático aquí">
-        <div className="space-y-2 text-sm text-gray-700">
+        <div className="space-y-2 text-[13px] text-gray-700">
           <p>La empatía no es fingir tristeza ni decir frases de consuelo de manual. Es reconocer lo que la persona está viviendo sin minimizarlo ni exagerarlo.</p>
           <p>En la práctica significa:</p>
           <div className="space-y-1.5 ml-2">
@@ -120,55 +125,34 @@ export default function EmpatiaPanel() {
 
           <div className="rounded-lg border border-gray-200 px-3 py-2.5">
             <p className="text-xs font-semibold text-gray-700 mb-1">El afiliado llora y no puede hablar</p>
-            <p className="text-sm text-gray-600">No llenar el silencio con preguntas. Esperar. Decir: <span className="font-semibold text-gray-800">"Aquí estoy, tómese su tiempo"</span>. Cuando pueda hablar, retomar desde donde quedó.</p>
+            <p className="text-[13px] text-gray-600">No llenar el silencio con preguntas. Esperar. Decir: <span className="font-semibold text-gray-800">"Aquí estoy, tómese su tiempo"</span>. Cuando pueda hablar, retomar desde donde quedó.</p>
           </div>
 
           <div className="rounded-lg border border-gray-200 px-3 py-2.5">
             <p className="text-xs font-semibold text-gray-700 mb-1">El afiliado está enojado por algo que salió mal</p>
-            <p className="text-sm text-gray-600">No defenderse ni excusar al servicio. Decir: <span className="font-semibold text-gray-800">"Entiendo su molestia y tiene razón en estar preocupado/a. Vamos a registrar esto y dar seguimiento"</span>. Registrar y escalar.</p>
+            <p className="text-[13px] text-gray-600">No defenderse ni excusar al servicio. Decir: <span className="font-semibold text-gray-800">"Entiendo su molestia y tiene razón en estar preocupado/a. Vamos a registrar esto y dar seguimiento"</span>. Registrar y escalar.</p>
           </div>
 
           <div className="rounded-lg border border-gray-200 px-3 py-2.5">
             <p className="text-xs font-semibold text-gray-700 mb-1">El afiliado hace preguntas que no sé responder</p>
-            <p className="text-sm text-gray-600">Ser honesto: <span className="font-semibold text-gray-800">"No tengo esa información ahora mismo, pero voy a derivar su consulta a quien pueda ayudarle"</span>. No inventar respuestas. Crear ticket.</p>
+            <p className="text-[13px] text-gray-600">Ser honesto: <span className="font-semibold text-gray-800">"No tengo esa información ahora mismo, pero voy a derivar su consulta a quien pueda ayudarle"</span>. No inventar respuestas. Crear ticket.</p>
           </div>
 
           <div className="rounded-lg border border-gray-200 px-3 py-2.5">
             <p className="text-xs font-semibold text-gray-700 mb-1">El afiliado pide cosas que no están en el plan</p>
-            <p className="text-sm text-gray-600">No decir "no se puede" sin verificar. Revisar Planiris. Si definitivamente no está cubierto: <span className="font-semibold text-gray-800">"Según su contrato actual eso no está incluido, pero puedo consultarle opciones adicionales"</span>. Derivar a ventas.</p>
+            <p className="text-[13px] text-gray-600">No decir "no se puede" sin verificar. Revisar Planiris. Si definitivamente no está cubierto: <span className="font-semibold text-gray-800">"Según su contrato actual eso no está incluido, pero puedo consultarle opciones adicionales"</span>. Derivar a ventas.</p>
           </div>
 
           <div className="rounded-lg border border-gray-200 px-3 py-2.5">
             <p className="text-xs font-semibold text-gray-700 mb-1">La llamada me afectó emocionalmente</p>
-            <p className="text-sm text-gray-600">Es normal. Trabajar con duelo ajeno tiene un costo emocional real. Al terminar la llamada, si se siente afectado/a, comunicarlo al supervisor. No es debilidad — es parte de hacer bien el trabajo.</p>
+            <p className="text-[13px] text-gray-600">Es normal. Trabajar con duelo ajeno tiene un costo emocional real. Al terminar la llamada, si se siente afectado/a, comunicarlo al supervisor. No es debilidad — es parte de hacer bien el trabajo.</p>
           </div>
 
         </div>
       </Bloque>
 
-      <hr className="border-gray-100" />
 
-      {/* Cuidado del agente */}
-      <Bloque titulo="Tu bienestar también importa">
-        <div className="bg-[#1a5c3a]/5 border border-[#1a5c3a]/20 rounded-lg px-4 py-3 space-y-2 text-sm text-gray-700">
-          <p>Atender este tipo de llamadas de manera continua puede generar fatiga emocional o empatía secundaria. Algunas señales de alerta:</p>
-          <div className="space-y-1 ml-2">
-            {[
-              "Dificultad para desconectarte de las llamadas al terminar el turno.",
-              "Sentirte abrumado/a o entristecido/a después de atender casos de duelo.",
-              "Responder de forma más brusca o distante que lo habitual.",
-              "Sentir que ya no te afecta nada — tampoco es saludable.",
-            ].map((s) => (
-              <div key={s} className="flex gap-2">
-                <span className="text-[#1a5c3a] shrink-0">·</span>
-                <p>{s}</p>
-              </div>
-            ))}
-          </div>
-          <p className="font-semibold text-gray-800 pt-1">Si identificas alguna de estas señales, habla con tu supervisor. Cuidarte a ti mismo/a te permite seguir cuidando a quienes llaman.</p>
-        </div>
-      </Bloque>
-
+      </div>
     </div>
   );
 }

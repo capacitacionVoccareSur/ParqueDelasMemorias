@@ -68,6 +68,7 @@ export default function HorariosAtencionPanel() {
       <p className="text-xs text-gray-500">
         Esta hoja contiene los accesos a Planiris, los horarios regulares de cada sede, los horarios en feriados y el calendario de eventos.
       </p>
+      <hr className="border-gray-100" />
 
       {/* Accesos Planiris */}
       <Bloque titulo="Accesos Planiris" destacado>

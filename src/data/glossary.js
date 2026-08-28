@@ -340,6 +340,11 @@ export const glossary = [
   },
   {
     seccion: "Parque de las Memorias",
+    termino: "Familia",
+    definicion: "Conjunto de personas que se hallan unidas por vínculos de consanguinidad o adopción, fundada en base a personas llamados padres, hijos, esposos y/o hermanos de ellos que viven en un hogar cultivando los afectos necesarios y naturales con intereses comunes de superación y progreso.",
+  },
+  {
+    seccion: "Parque de las Memorias",
     termino: "Funeraria",
     definicion: "Empresa o establecimiento dedicado a brindar servicios relacionados con la preparación, organización y ejecución de funerales y ceremonias de despedida.",
   },
@@ -372,6 +377,11 @@ export const glossary = [
     seccion: "Parque de las Memorias",
     termino: "Legado",
     definicion: "Aquello que una persona transmite o deja a otros. Puede preservarse mediante elementos conmemorativos que guardan la memoria del ser querido.",
+  },
+  {
+    seccion: "Parque de las Memorias",
+    termino: "Macizos Ornamentales, Arborización y Paisajismo",
+    definicion: "Los ornamentos que se encuentren en el predio del Parque Cementerio Jardín, sean estos de cualquier tipo o clase. Ej.: ornamentos florales, disposición de árboles cualquiera sea su especie, monumentos, fuentes, bancos, piedras, señalética, etc.",
   },
   {
     seccion: "Parque de las Memorias",
@@ -491,12 +501,12 @@ export const glossary = [
   {
     seccion: "Parque de las Memorias",
     termino: "Sectores del Cementerio",
-    definicion: "Áreas que componen el predio del Cementerio Jardín: Álamos, Capilla, Ceibos 1, Ceibos 2, Jacarandá, Laguna, Molles 1, Molles 2, Molles 3, Pinos, FEDEXCHACO y Notables.",
+    definicion: "Áreas que componen el predio del Cementerio Jardín: Álamos, Capilla, Ceibos 1, Ceibos 2, Jacarandá, Laguna, Molles 1, Molles 2, Molles 3, Pinos, FEDEXCHACO (sector asignado a la Federación de Ex-combatientes de la Guerra del Chaco) y Notables (sector asignado a personas declaradas formalmente como notables). Dentro de estos sectores se encuentran también áreas de administración, servicios, vías de circulación y depósitos, señalizadas como de acceso restringido o libre.",
   },
   {
     seccion: "Parque de las Memorias",
     termino: "Servicio de Exhumación",
-    definicion: "Servicio prestado por PDM al proceder a la exhumación de un difunto, según procedimientos internos. Se presta después de los 5 años de inhumación o por orden judicial expresa.",
+    definicion: "Servicio prestado por PDM en el momento que se procede a la exhumación de un difunto. El servicio está predeterminado de acuerdo a los procedimientos, políticas, normas y protocolos establecidos por la empresa. Se presta después de los 5 años de la inhumación del difunto, o salvo orden judicial expresa.",
   },
   {
     seccion: "Parque de las Memorias",
