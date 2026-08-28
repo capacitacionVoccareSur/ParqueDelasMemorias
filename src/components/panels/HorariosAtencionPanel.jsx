@@ -103,7 +103,6 @@ export default function HorariosAtencionPanel() {
           <p className="text-[10px] text-gray-400 mb-1">Atención y/o visita día regular</p>
           <Fila label="Lunes a viernes" valor="08:30 – 16:30" />
           <Fila label="Sábado" valor="09:00 – 13:00" />
-          <p className="text-[10px] text-gray-400 mt-1">Ref: 103, 16, 010 (Av. Libertador)</p>
         </Bloque>
       </div>
 
@@ -133,6 +132,37 @@ export default function HorariosAtencionPanel() {
             <Fila label="Sede" valor="Cerrada" cerrado />
           </Bloque>
         </div>
+      </div>
+
+      {/* Direcciones y Transporte */}
+      <div className="grid grid-cols-2 gap-2">
+        <Bloque titulo="Parque de las Memorias — Dirección y transporte">
+          <p className="text-[10px] text-gray-400 mb-1">Cementerio Jardín</p>
+          <p className="text-xs text-gray-700 mb-2">Av. Circunvalación Km 3.5 · pasando el Puente Esteban Montaño</p>
+          <p className="text-[10px] text-gray-400 mb-1">Líneas de transporte</p>
+          <div className="flex flex-wrap gap-1.5">
+            {["212 – Amancayas Sacaba", "233 – Pacata Baja"].map((l) => (
+              <span key={l} className="text-[10px] font-semibold bg-[#1a5c3a]/10 text-[#1a5c3a] px-2 py-0.5 rounded">
+                {l}
+              </span>
+            ))}
+          </div>
+          <p className="text-[10px] text-gray-400 mt-1.5">Tomar de la Aroma</p>
+        </Bloque>
+
+        <Bloque titulo="Casa Aura — Dirección y transporte">
+          <p className="text-[10px] text-gray-400 mb-1">Casa de Homenajes</p>
+          <p className="text-xs text-gray-700 mb-2">Av. Atahuallpa N° 2108, casi esq. Julio Rodríguez · zona de la Ciclovía</p>
+          <p className="text-[10px] text-gray-400 mb-1">Líneas de transporte</p>
+          <div className="flex flex-wrap gap-1.5">
+            {["103", "16", "010"].map((l) => (
+              <span key={l} className="text-[10px] font-semibold bg-[#1a5c3a]/10 text-[#1a5c3a] px-2 py-0.5 rounded">
+                {l}
+              </span>
+            ))}
+          </div>
+          <p className="text-[10px] text-gray-400 mt-1.5">Tomar de la Av. Libertador</p>
+        </Bloque>
       </div>
 
       {/* Calendario de eventos — desplegable */}
