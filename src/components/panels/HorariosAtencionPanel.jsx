@@ -63,7 +63,7 @@ export default function HorariosAtencionPanel() {
   const [calendarioAbierto, setCalendarioAbierto] = useState(false);
 
   return (
-    <div className="space-y-2 max-w-5xl">
+    <div className="space-y-2 max-w-5xl h-full overflow-y-auto">
 
       <p className="text-xs text-gray-500">
         Esta hoja contiene los accesos a Planiris, los horarios regulares de cada sede, los horarios en feriados y el calendario de eventos.

@@ -96,7 +96,7 @@ export default function Layout({ activePanel, setActivePanel }) {
 
       {/* Content panel — connected to active tab */}
       <div className="flex-1 mx-4 mb-2 bg-white border border-gray-200 rounded-b-md rounded-tr-md shadow-sm flex flex-col min-h-0 relative z-0">
-        <div className="flex-1 overflow-y-auto p-5 min-h-0">
+        <div className="flex-1 overflow-hidden p-4 min-h-0 flex flex-col">
           {panelMap[activePanel]}
         </div>
       </div>

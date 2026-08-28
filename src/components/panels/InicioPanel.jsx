@@ -11,7 +11,7 @@ function Script({ etiqueta, texto, principal = false }) {
 
 export default function InicioPanel() {
   return (
-    <div className="max-w-5xl space-y-3">
+    <div className="max-w-5xl space-y-3 h-full overflow-y-auto">
 
       <p className="text-xs text-gray-500">Guiones de apertura y cierre, instrucciones para completar el registro en Llenar Aquí y gestión de tickets.</p>
       <hr className="border-gray-100" />

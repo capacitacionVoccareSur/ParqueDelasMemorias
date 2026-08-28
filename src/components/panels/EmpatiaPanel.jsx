@@ -26,7 +26,7 @@ function Evitar({ texto }) {
 
 export default function EmpatiaPanel() {
   return (
-    <div className="space-y-6 max-w-5xl">
+    <div className="space-y-6 max-w-5xl h-full overflow-y-auto">
 
       <p className="text-xs text-gray-500">Guía de comunicación empática para llamadas sensibles: frases recomendadas, frases a evitar y manejo de situaciones difíciles.</p>
       <hr className="border-gray-100" />
