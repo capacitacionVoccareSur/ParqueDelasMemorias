@@ -1,5 +1,35 @@
 import { glossary } from "./glossary.js";
 
+// ── INICIO ───────────────────────────────────────────────────────────────────
+const inicioItems = [
+  { titulo: "Guion de apertura estándar", subtexto: "Gracias por llamar a Parque de las Memorias – Casa Aura, mi nombre es [NOMBRE], ¿En qué puedo ayudarle?" },
+  { titulo: "Guion apertura – afiliado de duelo", subtexto: "Lamento mucho su pérdida. Estoy aquí para ayudarle." },
+  { titulo: "Guion apertura – afiliado en crisis", subtexto: "Lamento mucho la situación que está atravesando. Estoy aquí para brindarle toda la ayuda necesaria. ¿Podría contarme qué necesita en este momento?" },
+  { titulo: "Frases de apoyo en llamada", subtexto: "Entiendo, tómese su tiempo. · Voy a ayudarle paso a paso. · Gracias por explicármelo. · No hay prisa." },
+  { titulo: "Frases a evitar en llamada", subtexto: "Tranquilícese · No se preocupe · Tiene que · No se puede" },
+  { titulo: "Despedida de llamada", subtexto: "Gracias por confiar en nosotros. Le acompañamos en este momento." },
+  { titulo: "Llenar Aquí – columna E (Servicio consultado)", subtexto: "Columna clave — dropdown que activa autocompletado de F (Preguntas de descarte) y J (Responsable). Completar primero." },
+  { titulo: "Llenar Aquí – columna A (Ticket)", subtexto: "Numerar en orden. Una fila por llamada." },
+  { titulo: "Llenar Aquí – columna H (Prioridad)", subtexto: "NORMAL · ALTA · URGENTE" },
+  { titulo: "Llenar Aquí – columna I (Acción)", subtexto: "INFORMACION BRINDADA · TICKET DERIVADO · TICKET DERIVADO CASOS ESPECIALES · TICKET DERIVADO CLIENTE INTERESADO" },
+  { titulo: "Ticket – proceso de derivación", subtexto: "Colocar N.° de ticket en la fila pintada → se autocompleta con datos de Llenar Aquí → copiar y enviar al grupo de WhatsApp Coordinación Bolivia." },
+];
+
+// ── EMPATÍA ──────────────────────────────────────────────────────────────────
+const empatiaItems = [
+  { titulo: "3 momentos del afiliado que llama", subtexto: "Antes del fallecimiento (ansiedad anticipatoria) · En el momento del fallecimiento (duelo agudo, puede llorar o hablar entrecortado) · Después del fallecimiento (agotamiento o molestia)" },
+  { titulo: "Qué significa ser empático en una llamada", subtexto: "Escuchar sin apurarse · Nombrar lo que la persona siente antes de dar información · No asumir cómo se siente · Ajustar el ritmo al estado del afiliado" },
+  { titulo: "Frase al abrir llamada de duelo", subtexto: "Lamento mucho su pérdida. Estoy aquí para acompañarle en este proceso." },
+  { titulo: "Frase al pedir información al afiliado en duelo", subtexto: "Entiendo que este momento es muy difícil. Vamos a resolverlo juntos, paso a paso." },
+  { titulo: "Frase cuando el afiliado llora o no puede hablar", subtexto: "Tómese el tiempo que necesite. No hay prisa. / Aquí estoy, tómese su tiempo." },
+  { titulo: "Frase al cerrar llamada de duelo", subtexto: "No está solo/a. Estamos disponibles las 24 horas si necesita llamarnos nuevamente." },
+  { titulo: "Frases que dañan – evitar siempre", subtexto: "Tranquilícese · No se preocupe eso pasa · Hay que seguir adelante · Todo pasa por algo · No llore que no ayuda · Tiene que calmarse para que pueda escucharle" },
+  { titulo: "Situación difícil: afiliado enojado por algo que salió mal", subtexto: "No defenderse ni excusar al servicio. Decir: Entiendo su molestia y tiene razón en estar preocupado/a. Vamos a registrar esto y dar seguimiento. Registrar y escalar." },
+  { titulo: "Situación difícil: preguntas que no sé responder", subtexto: "Ser honesto: No tengo esa información ahora mismo, pero voy a derivar su consulta a quien pueda ayudarle. No inventar respuestas. Crear ticket." },
+  { titulo: "Situación difícil: afiliado pide cosas no incluidas en el plan", subtexto: "No decir no se puede sin verificar. Revisar Planiris. Si no está cubierto: Según su contrato actual eso no está incluido, pero puedo consultarle opciones adicionales. Derivar a ventas." },
+  { titulo: "Situación difícil: la llamada me afectó emocionalmente", subtexto: "Es normal trabajar con duelo ajeno. Comunicarlo al supervisor al terminar la llamada. No es debilidad — es parte de hacer bien el trabajo." },
+];
+
 // ── AUXILIAR ────────────────────────────────────────────────────────────────
 const auxiliarItems = [
   // Información General (N0)
@@ -109,10 +139,37 @@ const preguntasItems = [
 
 // ── HORARIOS ─────────────────────────────────────────────────────────────────
 const horariosItems = [
-  { tema: "Horario Parque de las Memorias", info: "Lunes a domingo 08:30–16:30. Feriados: atención 08:30–12:30, visita 08:30–16:30." },
-  { tema: "Horario Casa Aura", info: "Lunes a viernes 08:30–16:30, sábado 09:00–13:00. Feriados: cerrada." },
-  { tema: "Planiris – credenciales Parque", info: "contactcenter@parquedelasmemorias.com · contraseña: 12345678" },
-  { tema: "Feriados Bolivia", info: "1 ene, 22 ene, carnaval, viernes santo, 1 may, corpus christi, 6 ago, 2 nov, 25 dic y feriados locales." },
+  { tema: "Horario Parque de las Memorias – día regular", info: "Lunes a domingo 08:30–16:30." },
+  { tema: "Horario Parque de las Memorias – feriados", info: "Atención al cliente 08:30–12:30 · Visita 08:30–16:30." },
+  { tema: "Horario Casa Aura – día regular", info: "Lunes a viernes 08:30–16:30 · Sábado 09:00–13:00." },
+  { tema: "Horario Casa Aura – feriados", info: "Sin atención (sede cerrada)." },
+  { tema: "Planiris – credenciales Parque de las Memorias", info: "contactcenter@parquedelasmemorias.com · contraseña: 12345678" },
+  { tema: "Feriados con horario diferenciado", info: "22 ene · Carnaval 16-17 feb · Viernes santo 3 abr · 1 may · Corpus Christi 4 jun · Año nuevo Aymara 21 jun · 6 ago · Aniversario Cbba 14 sep · Prof. funerario 3 nov · Día del peatón departamental" },
+  { tema: "Dirección Parque de las Memorias", info: "Av. Circunvalación Km 3.5 · pasando el Puente Esteban Montaño" },
+  { tema: "Dirección Casa Aura", info: "Av. Atahuallpa N° 2108, casi esquina Julio Rodríguez · zona de la Ciclovía" },
+  { tema: "Transporte Parque de las Memorias – líneas", info: "212 Amancayas Sacaba · 233 Pacata Baja · tomar de la Aroma" },
+  { tema: "Transporte Casa Aura – líneas", info: "103 · 16 · 010 · tomar de la Av. Libertador" },
+  { tema: "Evento – Día del Padre", info: "Jueves 19 de marzo · Misa comunitaria, Concierto, Árbol de los recuerdos" },
+  { tema: "Evento – Día del Niño", info: "Domingo 12 de abril · Pintado con colores, Pintacaritas, Función de títeres" },
+  { tema: "Evento – Día de la Madre", info: "Miércoles 27 de mayo · Misa comunitaria 11:30, Concierto 12:15, Árbol de los recuerdos" },
+  { tema: "Evento – Noche de luces", info: "Sábado 20 de junio · Misa comunitaria, Concierto, Liberación de velas" },
+  { tema: "Evento – Mundo Unido", info: "Domingo 20 de septiembre · Misa comunitaria, Concierto, Liberación de globos" },
+  { tema: "Evento – Día de Difuntos", info: "31 oct / 1-2 nov · Misa comunitaria, Concierto, Mast'aku comunitario · Elección mejor Mast'aku 2 nov" },
+  { tema: "Evento – Cápsula de Memorias", info: "Domingo 20 de diciembre · Misa comunitaria, Concierto, Apertura de cápsula" },
+  { tema: "Evento Casa Aura – Árbol de la Memoria", info: "Sábado 19 de diciembre · Misa, Concierto, Entrega de esferas, Decoración de sitio con flores" },
+];
+
+// ── MATRIZ RACI ──────────────────────────────────────────────────────────────
+const raciItems = [
+  { actividad: "Atender y clasificar llamada",               obs: "Se define motivo y prioridad. N0: Responsable" },
+  { actividad: "Registrar ticket / bitácora",                obs: "Siempre obligatorio. N0: Responsable" },
+  { actividad: "Entregar información general",               obs: "Usar base de conocimiento. N0: Responsable" },
+  { actividad: "Coordinar servicios funerarios / cremación", obs: "N0 deriva y acompaña. N1: Responsable" },
+  { actividad: "Cotización / derivación comercial (planes)", obs: "N2 maneja cierres y seguimiento. N2: Responsable" },
+  { actividad: "Trámites administrativos y certificaciones", obs: "N0 informa requisitos y deriva. N0: Responsable" },
+  { actividad: "Reclamos / quejas",                         obs: "SGI evalúa y define respuesta. N0 y N2: Responsable" },
+  { actividad: "Monitoreo de calidad",                       obs: "N1: Responsable, N2: Aprobador" },
+  { actividad: "Reportes de operación",                      obs: "N0 entrega, empresa valida. N0: Responsable" },
 ];
 
 // ── MATRIZ ───────────────────────────────────────────────────────────────────
@@ -139,12 +196,32 @@ export const searchIndex = [
   // Pestañas / secciones principales
   { id: id(), titulo: "Inicio",                    subtexto: "Guiones de atención, apertura, cierre, Llenar Aquí, Ticket", panel: "inicio",    panelLabel: "Inicio",                    tag: "Sección" },
   { id: id(), titulo: "AUXILIAR",                  subtexto: "Tipos de consulta, niveles N0 N1 N2, acción a tomar",        panel: "auxiliar",  panelLabel: "AUXILIAR",                  tag: "Sección" },
-  { id: id(), titulo: "Horarios de Atención",      subtexto: "Horarios PDM y Casa Aura, feriados, Planiris",              panel: "horarios",  panelLabel: "Horarios de Atención",      tag: "Sección" },
-  { id: id(), titulo: "Normas y Restricciones",    subtexto: "Normas de atención, registro, Planiris, escalamiento, conducta", panel: "normas", panelLabel: "Normas y Restricciones",  tag: "Sección" },
+  { id: id(), titulo: "Horarios de Atención",      subtexto: "Horarios PDM y Casa Aura, feriados, transporte, direcciones, eventos", panel: "horarios", panelLabel: "Horarios de Atención", tag: "Sección" },
+  { id: id(), titulo: "Normas y Restricciones",    subtexto: "Reglamento de Uso: ingreso, prohibiciones, sitios memoriales, ceremonias, responsabilidad, contratos", panel: "normas", panelLabel: "Normas y Restricciones", tag: "Sección" },
   { id: id(), titulo: "Glosario de Términos",      subtexto: "Definiciones de términos Casa Aura y Parque de las Memorias", panel: "glosario", panelLabel: "Glosario de Términos",    tag: "Sección" },
-  { id: id(), titulo: "Matriz de Escalamiento",    subtexto: "Directorio de contactos N1 y N2, tabla RACI, Planiris",    panel: "matriz",    panelLabel: "Matriz de Escalamiento",    tag: "Sección" },
-  { id: id(), titulo: "Preguntas Frecuentes",      subtexto: "Referencia de consultas frecuentes por tipo y escala",      panel: "preguntas", panelLabel: "Preguntas Frecuentes",      tag: "Sección" },
-  { id: id(), titulo: "Empatía",                   subtexto: "Guía de comunicación empática, frases de apoyo, situaciones difíciles", panel: "empatia", panelLabel: "Empatía",         tag: "Sección" },
+  { id: id(), titulo: "Matriz de Escalamiento",    subtexto: "Directorio de contactos N1 y N2, tabla RACI, acceso Planiris", panel: "matriz",  panelLabel: "Matriz de Escalamiento",    tag: "Sección" },
+  { id: id(), titulo: "Preguntas Frecuentes",      subtexto: "Referencia de consultas frecuentes por tipo y escala de derivación", panel: "preguntas", panelLabel: "Preguntas Frecuentes", tag: "Sección" },
+  { id: id(), titulo: "Empatía",                   subtexto: "Comunicación empática, frases de apoyo, frases a evitar, situaciones difíciles", panel: "empatia", panelLabel: "Empatía", tag: "Sección" },
+
+  // Inicio – guiones y procedimientos
+  ...inicioItems.map((i) => ({
+    id: id(),
+    titulo: i.titulo,
+    subtexto: i.subtexto,
+    panel: "inicio",
+    panelLabel: "Inicio",
+    tag: "Guión",
+  })),
+
+  // Empatía – frases y situaciones
+  ...empatiaItems.map((e) => ({
+    id: id(),
+    titulo: e.titulo,
+    subtexto: e.subtexto,
+    panel: "empatia",
+    panelLabel: "Empatía",
+    tag: "Empatía",
+  })),
 
   // Glosario
   ...glossary.map((g) => ({
@@ -186,7 +263,7 @@ export const searchIndex = [
     tag: p.categoria,
   })),
 
-  // Horarios
+  // Horarios – horarios, feriados, transporte, direcciones, eventos
   ...horariosItems.map((h) => ({
     id: id(),
     titulo: h.tema,
@@ -196,7 +273,7 @@ export const searchIndex = [
     tag: "Horarios",
   })),
 
-  // Matriz – contactos
+  // Matriz – contactos directorio
   ...matrizItems.map((m) => ({
     id: id(),
     titulo: m.nombre,
@@ -204,5 +281,15 @@ export const searchIndex = [
     panel: "matriz",
     panelLabel: "Matriz de Escalamiento",
     tag: m.nivel,
+  })),
+
+  // Matriz – actividades RACI
+  ...raciItems.map((r) => ({
+    id: id(),
+    titulo: r.actividad,
+    subtexto: r.obs,
+    panel: "matriz",
+    panelLabel: "Matriz de Escalamiento",
+    tag: "RACI",
   })),
 ];

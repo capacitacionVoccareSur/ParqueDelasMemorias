@@ -12,9 +12,11 @@ const PANEL_COLORS = {
   empatia:   "bg-pink-100 text-pink-700",
 };
 
+const norm = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
 function highlight(text, query) {
   if (!query) return text;
-  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  const idx = norm(text).indexOf(norm(query));
   if (idx === -1) return text;
   return (
     <>
@@ -44,12 +46,12 @@ export default function GlobalSearch({ open, onClose, onNavigate }) {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  const q = query.trim().toLowerCase();
+  const q = norm(query.trim());
   const resultados = q.length < 2 ? [] : searchIndex
     .filter((item) =>
-      item.titulo.toLowerCase().includes(q) ||
-      item.subtexto.toLowerCase().includes(q) ||
-      item.tag?.toLowerCase().includes(q)
+      norm(item.titulo).includes(q) ||
+      norm(item.subtexto).includes(q) ||
+      norm(item.tag ?? "").includes(q)
     )
     .slice(0, 12);
 
